@@ -46,21 +46,21 @@ It uses the snapshot & release repositories referenced in that project.
 
 ### Maven Release plugin
 
-By default the version is v2.5.3, this is to allow the default settings
+By default the maven [release plugin](https://maven.apache.org/maven-release/maven-release-plugin/) version is v2.5.3, this is to allow the default settings
 of auto versioning sub-modules. (`autoVersionSubmodules`)
 
 ### Maven checkstyle plugin - with google style checks
 
-By default the version is v2.5.3, it is configured to use the rules from
+By default the maven [checkstlye plugin](https://maven.apache.org/plugins/maven-checkstyle-plugin/) version is v2.5.3, it is configured to use the rules from
 [google style check](http://checkstyle.sourceforge.net/google_style.html)
 
 ### Corbetura reporting plugin - code coverage by tests
 
-The reporting plugin is version 2.7, in site generation a corbetura coverage report is generated.
+The [codehaus corbetura](http://www.mojohaus.org/cobertura-maven-plugin/) reporting plugin is version 2.7, in site generation a corbetura coverage report is generated.
 
 ### Maven Enforcer plugin
 
-The maven enforcer plugin validates minimum governance, build rules for a project. The version is 1.4.1.
+The maven [enforcer plugin](https://maven.apache.org/enforcer/maven-enforcer-plugin/) validates minimum governance, build rules for a project. The version is 1.4.1.
 The enforced minimums are shown in the next section.
 
 #### Enforced Miniumums
@@ -81,7 +81,7 @@ Want a high level of Java, good security with support for Microservices, Spring 
 
 ## The checkstyle is too damn hard!
 
-You can extend / overwrite the checkstyle with an 'exclusions' file.
+You can extend / overwrite the checkstyle with a [suppressions filter](https://maven.apache.org/plugins/maven-checkstyle-plugin/examples/suppressions-filter.html)
 
 ## I don't want to corbetura cover generated java files
 
