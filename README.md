@@ -19,6 +19,25 @@ Use the following parent configuration:
 
 Change the `<groupId/>`, `<artifactId>` to your preferred identifiers. 
 
+## Project Name - naming rules & convention
+
+`<project.name>` should follow a convention of using lowercase with no spaces.
+
+### Locations based on project name
+
+The default reporting & project documentation go the path of the `project.name` property in Github.  Examples if the `<project.name>` was set to `tiger` would be:
+
+* Github url:  https://github.com/npiper/tiger
+* Issue tracking: https://github.com/npiper/tiger/issues
+* Project pages (Github pages):  http://npiper.github.io/tiger
+* scm connection: scm:git:git@github.com:npiper/tiger.git
+
+
+# Default Release & Distribution
+
+The `pom.xml` files assumes it is being built, tested, packaged and released in the environment of the [environment.buildfarm](https://bitbucket.org/n_piper/environment.buildfarm) project.
+
+It uses the snapshot & release repositories referenced in that project.
 
 
 # Configurable properties for your build
