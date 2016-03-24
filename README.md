@@ -63,15 +63,15 @@ The reporting plugin is version 2.7, in site generation a corbetura coverage rep
 The maven enforcer plugin validates minimum governance, build rules for a project. The version is 1.4.1.
 The enforced minimums are shown in the next section.
 
-## Enforced Miniumums
+#### Enforced Miniumums
 
 The maven enforcer plugin validates that the project will use the following minimum settings.
 
-### Maven 3.1+
+##### Maven 3.1+
 
 Don't want to maintain older versions of POM's, maven plugins.
 
-### Java 1.7+
+##### Java 1.7+
 
 Want a high level of Java, good security with support for Microservices, Spring Boot & Annotations.
 
