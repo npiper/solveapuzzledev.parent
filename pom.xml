@@ -131,7 +131,7 @@
   <!-- PROJECT INFORMATION -->
 
     <!-- Name of the project or module , typically more than just the artifactId i.e. Java 1.5 = 'tiger', printed in the execution, build. Not mandatory but useful. -->
-  <name>PROJECT.NAME</name>
+  <name>${project.name}</name>
 
   <!-- Description of a project is always good, helps POM readers -->
   <description>
@@ -139,7 +139,7 @@
   </description>
 
   <!-- URL is helpful for maintenance on where to find the source code, project site. -->
-  <url>https://github.com/npiper/PROJECT.NAME/</url>
+  <url>https://github.com/npiper/${project.name}/</url>
   <!-- When did this all start...? -->
   <inceptionYear>PROJECT.STARTYEAR</inceptionYear>
 
@@ -160,7 +160,7 @@
   <!-- Where / Which system to raise issues in, can be used by plugins but typically for project / site documentation. -->
   <issueManagement>
     <system>github</system>
-    <url>https://github.com/npiper/PROJECT.NAME/issues</url>
+    <url>https://github.com/npiper/${project.name}/issues</url>
   </issueManagement>
 
   <!-- Not bothering with this, using VM's and the artifactory build is more relevant -->
@@ -181,9 +181,9 @@
   <!-- Software configuration management details -->
   <!-- Critical for the mvn:release plugin & process, where to find the source code. -->
   <scm>
-    <connection>scm:git:git@github.com:npiper/PROJECT.NAME.git</connection>
-    <developerConnection>scm:git:git@github.com:npiper/PROJECT.NAME.git</developerConnection>
-    <url>https://github.com/npiper/PROJECT.NAME/</url>
+    <connection>scm:git:git@github.com:npiper/${project.name}.git</connection>
+    <developerConnection>scm:git:git@github.com:npiper/${project.name}.git</developerConnection>
+    <url>https://github.com/npiper/${project.name}/</url>
   </scm>
 
 <!-- REPOSITORIES & PLUGIN REPOSITORIES -->
@@ -193,9 +193,26 @@
 
     <!--manages the distribution of the artifact and supporting files during build, release process.  Critical for the mvn:deploy & mvn:release process -->
   <distributionManagement>
+
+   <!-- Release repository based on use of https://bitbucket.org/n_piper/environment.buildfarm -->
+   <repository>
+      <id>release-local</id>
+      <name>release-local</name>
+      <url>http://solveapuzzledev-repo:8081/artifactory/libs-release-local</url>
+    </repository>
+
+    <!-- Snapshot repository based on https://bitbucket.org/n_piper/environment.buildfarm -->
+    <snapshotRepository>
+      <uniqueVersion>true</uniqueVersion>
+      <id>snapshot-local</id>
+      <name>snapshot-locao</name>
+      <url>http://solveapuzzledev-repo:8081/artifactory/libs-snapshot-local</url>
+    </snapshotRepository>
+
+    <!-- Where the pages go -->
     <site>
       <id>gh-pages</id>
-      <url>http://npiper.github.io/PROJECT.NAME/</url>
+      <url>http://npiper.github.io/${project.name}/</url>
     </site>
   </distributionManagement>
 

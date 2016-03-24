@@ -4,7 +4,7 @@ This project is a parent pom for use in other projects, or inheritance.
 
 ## How to use the project parent in your module, project.
 
-Use the following parent configuration
+Use the following parent configuration:
 
 ```
 <parent>
@@ -14,6 +14,12 @@ Use the following parent configuration
     <version>0-SNAPSHOT</version>
 </parent>
 ```
+
+### Option 2:  Just copy it 
+
+Change the `<groupId/>`, `<artifactId>` to your preferred identifiers. 
+
+
 
 # Configurable properties for your build
 
