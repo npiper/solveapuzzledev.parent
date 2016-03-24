@@ -149,6 +149,25 @@
     </license>
   </licenses>
 
+  <!-- Typically only core dev team, leads, buildmasters. If the person should not be contacted about the project or initiative, they need not be listed here -->
+    <developers>
+    <developer>
+      <id>npiper</id>
+      <name>Neil Piper</name>
+      <email>solveapuzzledev@gmail.com<email>
+      <url>https://www.linkedin.com/in/piperneil</url>
+      <!--
+      <organization>ACME</organization>
+      <organizationUrl>http://www.example.com</organizationUrl>
+    -->
+      <roles>
+        <role>architect</role>
+        <role>developer</role>
+      </roles>
+      <timezone>Australia/Melbourne</timezone>
+    </developer>
+  </developers>
+
 
   <!-- ENVIRONMENT & RELEASE SETTINGS -->
 
@@ -200,7 +219,7 @@
     <snapshotRepository>
       <uniqueVersion>true</uniqueVersion>
       <id>snapshot-local</id>
-      <name>snapshot-locao</name>
+      <name>snapshot-local</name>
       <url>http://solveapuzzledev-repo:8081/artifactory/libs-snapshot-local</url>
     </snapshotRepository>
 
