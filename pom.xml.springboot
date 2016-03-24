@@ -2,7 +2,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-    <!-- Template Project file for my projects - based on https://maven.apache.org/pom.html -->
+    <!-- Template Spring boot Project file for my projects - based on https://maven.apache.org/pom.html 
+    
+      Examples / Dependencies sourced from: https://spring.io/guides/gs/spring-boot/
+
+     -->
   
     <groupId>com.solveapuzzldev</groupId>
     <artifactId>parent.github</artifactId>
