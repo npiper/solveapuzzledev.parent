@@ -1,0 +1,61 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+  <servers>
+    <!-- local snapshot repo -->
+    <server>
+      <id>snapshot-local</id>
+      <username>admin</username>
+      <password>password</password>
+    </server>
+    <!-- local repository -->
+    <server>
+      <id>release-local</id>
+      <username>admin</username>
+      <password>password</password>
+    </server>
+
+    <!-- Github -->
+    <server>
+  <id>github.com</id>
+  <username>npiper</username>
+  <password>*******</password>
+</server>
+  </servers>
+
+  <profiles>
+    <profile>
+      <id>default-repo</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <repositories>
+
+        <repository>
+          <id>central</id>
+          <url>http://repo.maven.apache.org/maven2</url>
+        </repository>
+
+        <repository>
+          <id>snapshot-local</id>
+          <url>http://solveapuzzledev-repo:8081/artifactory/libs-snapshot-local</url>
+          <snapshots>
+            <enabled>true</enabled>
+            <updatePolicy>always</updatePolicy>
+          </snapshots>
+        </repository>
+
+        <repository>
+          <id>release-local</id>
+          <url>http://solveapuzzledev-repo:8081/artifactory/libs-release-local</url>
+          <releases>
+            <enabled>true</enabled>
+            <updatePolicy>always</updatePolicy>
+          </releases>
+        </repository>
+
+      </repositories>
+    </profile>
+  </profiles>
+
+</settings>
