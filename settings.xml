@@ -21,6 +21,12 @@
   <username>npiper</username>
   <password>*******</password>
 </server>
+
+  <!-- Bitbucket -->
+  <server>
+     <id>bitbucket.org</id>
+     <username>n_piper</username>
+     <password>********</password>
   </servers>
 
   <profiles>
